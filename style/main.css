@@ -272,7 +272,7 @@ main {
 @media (min-width: 1440px) {
     body {
         background-color: var(--clr-element-body-background);
-        padding: 2rem 0;
+        padding: 6.5rem 0;
     }
 
     main {
