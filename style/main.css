@@ -1,0 +1,300 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* html,
+body {
+    height: 100vh;
+} */
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+    /* Primary Colors */
+    --clr-primary-red: hsl(1, 90%, 64%);
+    --clr-primary-blue: hsl(219, 85%, 26%);
+
+
+    /* Neutral Colors */
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
+    --clr-neutral-light-grayish-blue-one: hsl(211, 68%, 94%);
+    --clr-neutral-light-grayish-blue-two: hsl(205, 33%, 90%);
+    --clr-neutral-grayish-blue: hsl(219, 14%, 63%);
+    --clr-neutral-dark-grayish-blue: hsl(219, 12%, 42%);
+    --clr-neutral-very-dark-blue: hsl(224, 21%, 14%);
+
+
+    /* Element Color */
+    --clr-element-count-box-background: hsl(219, 96%, 22%);
+    --clr-element-read-all-button: hsl(225, 5%, 49%);
+    --clr-element-read-all-button-hover: hsl(222, 31%, 47%);
+    --clr-element-notification-background: hsl(206, 64%, 98%);
+    --clr-element-notification-message: var(--clr-element-read-all-button);
+    --clr-element-notification-type: hsl(219, 8%, 64%);
+    --clr-element-group-notification: hsl(218, 80%, 33%);
+    --clr-element-private-message-border: hsl(210, 14%, 92%);
+    --clr-element-body-background: hsl(228, 71%, 99%);
+    --clr-element-main-shadow: hsl(240, 12%, 97%);
+    --clr-element-private-message-background: hsl(210, 63%, 94%);
+
+
+    /* Font Family */
+    --ff-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+
+
+    /* Font Weight */
+    --fw-medium: 500;
+    --fw-extra-bold: 800;
+
+
+}
+
+.account-name,
+.reaction-notification,
+.group-notification {
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: var(--fw-extra-bold);
+}
+
+.account-name:hover,
+.reaction-notification:hover {
+    color: var(--clr-element-group-notification);
+}
+
+.reaction-notification,
+.group-notification {
+    margin-left: .2rem;
+}
+
+.personal-image > img,
+.post-image > img {
+    max-height: 36px;
+    max-width: 36px;
+}
+
+.account-name {
+    color: var(--clr-neutral-very-dark-blue);
+    margin-right: .2rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-self-start {
+    align-self: flex-start;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.group-notification {
+    color: var(--clr-element-group-notification);
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.reaction-notification {
+    color: var(--clr-element-notification-type);
+}
+
+.read {
+    background-color: inherit;
+}
+
+.unread {
+    background-color: var(--clr-element-notification-background);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+
+main {
+    background-color: var(--clr-neutral-white);
+    font-family: var(--ff-plus-jakarta-sans);
+    max-width: 375px;
+    margin: auto;
+    padding: 1.5rem 1rem;
+}
+
+.notification-header {
+    margin-bottom: 1.2rem;
+}
+
+.notification-count > h1 {
+    color: var(--clr-neutral-very-dark-blue);
+    font-weight: var(--fw-extra-bold);
+    font-size: 1.2rem;
+}
+
+.count-box {
+    background-color: var(--clr-element-count-box-background);
+    border-radius: .4rem;
+    color: var(--clr-neutral-white);
+    height: 1.8rem;
+    margin-left: .5rem;
+    width: 2.1rem;
+}
+
+.count-box > span {
+    font-weight: var(--fw-extra-bold);
+}
+
+#read-all {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--clr-element-read-all-button);
+    font-size: .8rem;
+}
+
+#read-all:hover {
+    color: var(--clr-element-read-all-button-hover);
+}
+
+.notification {
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.personal-image {
+    margin-right: 1rem;
+}
+
+.notification-content {
+    line-height: 1.1;
+    max-width: 22ch;
+}
+
+.notification-content > p {
+    font-size: .8rem;
+}
+
+.notification-content > p:nth-child(1) {
+    color: var(--clr-element-notification-message);
+    margin-bottom: .4rem;
+}
+
+.notification-content > p:nth-child(2) {
+    color: var(--clr-neutral-grayish-blue);
+}
+
+.unread-dot {
+    background: var(--clr-primary-red);
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin-left: 0.3rem;
+    width: 8px;
+}
+
+.private-message-content {
+    cursor: pointer;
+    border: .0625rem solid var(--clr-element-private-message-border);
+    border-radius: .2rem;
+    margin-top: .5rem;
+    padding: .8rem;
+}
+
+.private-message-content > p {
+    cursor: pointer;
+    color: var(--clr-neutral-dark-grayish-blue);
+    font-size: .8rem;
+    max-width: 23ch;
+    opacity: .8;
+}
+
+.private-message-content:hover {
+    background-color: var(--clr-element-private-message-background);
+}
+
+.post-image > img {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-image > img:hover {
+    border: 3px solid var(--clr-element-notification-background);
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-color: var(--clr-element-body-background);
+        padding: 2rem 0;
+    }
+
+    main {
+        border-radius: .7rem;
+        box-shadow: 
+        .3125rem .3125rem 1rem .1875rem var(--clr-element-main-shadow),
+        -.3125rem 0 1rem .1875rem var(--clr-element-main-shadow);
+        max-width: 40rem;
+        padding: 2rem 2rem 0;
+    }
+
+    .notification-content {
+        max-width: none;
+    }
+
+    .notification-content,
+    .notification-private-message {
+        flex-grow: 1;
+    }
+
+    .private-message-content  > p{
+        font-size: .87rem;
+        max-width: none;
+    }
+}
